@@ -19,7 +19,7 @@ export default function PhotosPage() {
             {images.map((filename, index) => (
               <div key={index} className="relative w-full h-64">
                 <Image
-                  src={`/photos/${filename}`}
+                  src={`/optimized/${filename.replace(/\.(jpg|jpeg|png)$/i, '.webp')}`}
                   alt={`${category} photo ${index + 1}`}
                   fill
                   style={{ objectFit: 'cover' }}
