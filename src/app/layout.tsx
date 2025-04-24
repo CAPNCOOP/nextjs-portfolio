@@ -14,12 +14,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-    <body className="bg-gray-100 text-gray-900">
+    <body className="m-0 box-border">
       <header className="p-4 bg-gray-800 shadow">
         <NavBar/ >
       </header>
 
-      <main className="min-h-screen p-8">{children}</main>
+      <main className="min-h-screen">{children}</main>
 
       <footer className="p-4 bg-white shadow mt-8">
         <div className="text-center text-sm text-gray-500">

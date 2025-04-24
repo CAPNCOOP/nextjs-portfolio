@@ -21,7 +21,7 @@ export default function NavBar() {
       )}
 
       <nav className="max-w-5xl mx-auto flex items-center justify-between relative z-50">
-        <h1 className="text-xl font-bold text-white">My Portfolio</h1>
+        <h1 className="text-xl font-bold text-white">Taylor W. Cooper</h1>
 
         <button
           className="md:hidden text-white text-2xl"
