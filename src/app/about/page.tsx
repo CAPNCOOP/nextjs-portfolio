@@ -1,10 +1,18 @@
+'use client';
+
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from  'next/link';
+import { motion } from 'framer-motion';
 
 export default function AboutPage() {
   return (
-    <>
+    <motion.section
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
+      viewport={{ once: true }}
+    >
       <Head>
         <title>About Me | Taylor Cooper</title>
         <meta
@@ -117,6 +125,6 @@ export default function AboutPage() {
           </div>
         </div>
       </main>
-    </>
+      </motion.section>
   );
 }
