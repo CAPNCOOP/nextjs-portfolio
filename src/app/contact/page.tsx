@@ -30,7 +30,7 @@ export default function ContactPage() {
 
   return (
     <section className="max-w-2xl mx-auto px-6 py-16">
-      <h1 className="text-4xl font-bold mb-4">Let’s Talk</h1>
+      <h1 className="text-4xl font-bold mb-4">I would love to hear from you</h1>
       <p className="text-lg text-gray-700 mb-8">
         Whether you’ve got a job opportunity, project idea, or just want to connect — I’d be glad to hear from you.
       </p>
