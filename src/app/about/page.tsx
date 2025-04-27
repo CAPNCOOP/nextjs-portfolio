@@ -46,7 +46,7 @@ export default function AboutPage() {
 
               <section className="mt-8">
                 <h2 className="text-2xl text-gray-800 font-semibold mb-4">Professional Highlights</h2>
-                <ul className="list-disc text-gray-600 list-inside space-y-2 text-gray-600">
+                <ul className="list-disc list-inside space-y-2 text-gray-600">
                   <li>Five years of global storytelling as a Marine Corps combat photographer</li>
                   <li>Developer focused on clean, accessible code with Next.js, Tailwind, and PHP</li>
                   <li>Proven communicator with leadership experience managing over 200 accounts</li>
