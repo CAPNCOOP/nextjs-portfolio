@@ -1,5 +1,5 @@
 'use client';
-
+import SEO from '@/components/SEO';
 import Image from 'next/image';
 
 export default function PhotosPage() {
@@ -10,28 +10,35 @@ export default function PhotosPage() {
   };
 
   return (
-    <section className="max-w-6xl mx-auto p-8">
-      <h1 className="text-4xl font-bold text-center mb-10">Photography</h1>
-      {Object.entries(galleries).map(([category, images]) => (
-        <div key={category} className="mb-12">
-          <h2 className="text-2xl font-semibold mb-4">{category}</h2>
-          <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-            {images.map((filename, index) => (
-              <div key={index} className="relative w-full h-64">
-                <Image
-                  src={`/optimized/${filename.replace(/\.(jpg|jpeg|png)$/i, '.webp')}`}
-                  alt={`${category} photo ${index + 1}`}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  className="rounded shadow"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  priority={index < 2}
-                />
-              </div>
-            ))}
+    <>
+      <SEO 
+        title="Taylor Cooper | Photography Portfolio" 
+        description="Browse Taylor Cooper's photography portfolio featuring landscape, automotive, and military images captured with creativity and precision."
+      />
+
+      <section className="max-w-6xl mx-auto p-8">
+        <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">Photography</h1>
+        {Object.entries(galleries).map(([category, images]) => (
+          <div key={category} className="mb-12">
+            <h2 className="text-2xl font-semibold mb-4 text-gray-600">{category}</h2>
+            <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+              {images.map((filename, index) => (
+                <div key={index} className="relative w-full h-64">
+                  <Image
+                    src={`/optimized/${filename.replace(/\.(jpg|jpeg|png)$/i, '.webp')}`}
+                    alt={`${category} photo ${index + 1}`}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    className="rounded shadow"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    priority={index < 2}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
-    </section>
+        ))}
+      </section>
+    </>
   );
 }

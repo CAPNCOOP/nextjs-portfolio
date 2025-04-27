@@ -17,21 +17,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preload" as="image" href="/landscape/trees-top-layer.svg" />
-        <link rel="preload" as="image" href="/landscape/trees-layer-1.svg" />
-        <link rel="preload" as="image" href="/landscape/trees-layer-2.svg" />
-              <link rel="preload" as="image" href="/landscape/mountain-1.svg" />
-        <link rel="preload" as="image" href="/landscape/mountain-2.svg" />
-        <link rel="preload" as="image" href="/landscape/bg-layer.svg" />
-      </head>
 
       <body className="m-0 box-border">
-        <header className="p-4 bg-stone-800 shadow">
+      <header className="w-full bg-gray-100 border-b-3">
+        <div className="max-w-7xl mx-auto flex items-center justify-between p-3">
           <NavBar />
-        </header>
+        </div>
+      </header>
 
-        <main className="min-h-screen">
+
+        <main className="min-h-screen bg-gray-100">
           <PageWrapper>{children}</PageWrapper>
         </main>
 

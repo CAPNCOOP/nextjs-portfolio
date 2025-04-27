@@ -1,5 +1,6 @@
 'use client';
 import ProjectCard from '@/components/ProjectCard';
+import SEO from '@/components/SEO';
 
 export default function ProjectsPage() {
   const projects = [
@@ -26,8 +27,14 @@ export default function ProjectsPage() {
   ];
 
   return (
+    <>
+      <SEO 
+        title="Taylor Cooper | Projects" 
+        description="Explore web development projects created by Taylor Cooper, including full-stack apps, creative designs, and custom platforms."
+      />
+
       <section className="max-w-5xl mx-auto p-8">
-        <h1 className="text-3xl font-bold mb-6">My Projects</h1>
+        <h1 className="text-3xl text-gray-800 font-bold mb-6">My Projects</h1>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 text-blue-950">
           {projects.map((project, index) => (
             <ProjectCard
@@ -39,5 +46,6 @@ export default function ProjectsPage() {
           ))}
         </div>
       </section>
+    </>
   );
 }

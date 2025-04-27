@@ -1,6 +1,7 @@
 'use client';
 import { GithubIcon, LinkedinIcon } from 'lucide-react';
 import { useState } from 'react';
+import SEO from '@/components/SEO';
 
 export default function ContactPage() {
   const [formStatus, setFormStatus] = useState('');
@@ -29,64 +30,72 @@ export default function ContactPage() {
   }
 
   return (
-    <section className="max-w-2xl mx-auto px-6 py-16">
-      <h1 className="text-4xl font-bold mb-4">I would love to hear from you</h1>
-      <p className="text-lg text-gray-700 mb-8">
-        Whether you’ve got a job opportunity, project idea, or just want to connect — I’d be glad to hear from you.
-      </p>
+    <>
+      <SEO 
+        title="Contact Taylor Cooper | Web Developer" 
+        description="Get in touch with Taylor Cooper for web development projects, collaborations, or inquiries. Based in Asheville, NC." 
+      />
 
-      <div className="flex space-x-6 mb-12">
-        <a
-          href="https://github.com/CAPNCOOP"
-          className="text-gray-700 hover:text-blue-300 transition"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GithubIcon size={40} />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/tcooper1412"
-          className="text-gray-700 hover:text-blue-300 transition"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <LinkedinIcon size={40} />
-        </a>
-      </div>
+      <section className="max-w-2xl mx-auto px-6 py-16">
 
-      <form className="grid grid-cols-1 gap-6" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          required
-          className="border border-gray-300 rounded p-3"
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          required
-          className="border border-gray-300 rounded p-3"
-        />
-        <textarea
-          name="message"
-          rows={5}
-          placeholder="Your Message"
-          required
-          className="border border-gray-300 rounded p-3 resize-none"
-        />
-        <button
-          type="submit"
-          className="bg-gray-900 text-white px-6 py-3 rounded hover:bg-gray-800 transition"
-        >
-          Send It
-        </button>
-      </form>
-        {formStatus && (
-        <p className="mt-6 text-sm text-center text-gray-600">{formStatus}</p>
-      )}
-    </section>
+        <h1 className="text-4xl font-bold mb-4 text-gray-700">I would love to hear from you</h1>
+        <p className="text-lg text-gray-700 mb-8">
+          Whether you’ve got a job opportunity, project idea, or just want to connect — I’d be glad to hear from you.
+        </p>
+
+        <div className="flex space-x-6 mb-12">
+          <a
+            href="https://github.com/CAPNCOOP"
+            className="text-gray-700 hover:text-gray-300 transition"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <GithubIcon size={40} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/tcooper1412"
+            className="text-gray-700 hover:text-gray-300 transition"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedinIcon size={40} />
+          </a>
+        </div>
+
+        <form className="grid grid-cols-1 gap-6" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            className="border border-gray-300 text-gray-500 rounded p-3"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            className="border border-gray-300 text-gray-500 rounded p-3"
+          />
+          <textarea
+            name="message"
+            rows={5}
+            placeholder="Your Message"
+            required
+            className="border border-gray-300 text-gray-500 rounded p-3 resize-none"
+          />
+          <button
+            type="submit"
+            className="bg-gray-900 text-white px-6 py-3 rounded hover:bg-gray-800 transition"
+          >
+            Send It
+          </button>
+        </form>
+          {formStatus && (
+          <p className="mt-6 text-sm text-center text-gray-600">{formStatus}</p>
+        )}
+      </section>
+    </>
   );
 }
 
