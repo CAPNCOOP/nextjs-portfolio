@@ -90,7 +90,7 @@ export default function AboutPage() {
                   <div>
                     <h3 className="text-xl font-medium mb-2 text-gray-700">Creative</h3>
                     <ul className="list-disc text-gray-600 list-inside space-y-1">
-                      <li>Adobe Photoshop, Illustrator, Premiere Pro, Audition</li>
+                      <li>Adobe Photoshop, Illustrator, Premiere Pro, Audition, Figma, Canva</li>
                       <li>Photography (DSLR), Video editing, Color correction</li>
                     </ul>
                   </div>
