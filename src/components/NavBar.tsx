@@ -15,7 +15,7 @@ export default function NavBar() {
       {/* Backdrop */}
       {menuOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+          className="fixed inset-0 bg-white bg-opacity-50 z-40 md:hidden"
           onClick={() => setMenuOpen(false)}
         />
       )}
@@ -35,7 +35,7 @@ export default function NavBar() {
           </button>
 
           <ul
-            className={`absolute top-16 left-0 w-full bg-stone-900 transition-all duration-300 ease-in-out z-50 md:bg-transparent md:static md:flex md:space-x-6 md:items-center md:w-auto ${
+            className={`absolute top-16 left-0 w-full bg-gray-50 transition-all duration-300 ease-in-out z-50 md:bg-transparent md:static md:flex md:space-x-6 md:items-center md:w-auto ${
               menuOpen ? 'block' : 'hidden'
             }`}
           >
@@ -49,7 +49,7 @@ export default function NavBar() {
               <li key={name}>
                 <Link
                   href={href}
-                  className="block px-4 py-2 text-gray-500 hover:-translate-y-[3px] hover:text-gray-800 transition transform"
+                  className="block px-4 py-2 text-gray-500 hover:-translate-y-[3px] bottom-2 hover:text-gray-800 transition transform"
                   onClick={handleLinkClick}
                 >
                   {name}

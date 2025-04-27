@@ -30,14 +30,14 @@ export default function RootLayout({
           <PageWrapper>{children}</PageWrapper>
         </main>
 
-        <footer className="flex justify-between content-center p-4 bg-stone-900 shadow">
-          <div className="text-center text-sm text-gray-400">
+        <footer className="flex justify-between content-center p-4 bg-gray-100 shadow">
+          <div className="text-center text-sm text-gray-500">
             &copy; {new Date().getFullYear()} Taylor Cooper. All rights reserved.
           </div>
           <div className="flex space-x-6">
             <a
               href="https://github.com/CAPNCOOP"
-              className="text-gray-400 hover:text-gray-200 transition"
+              className="text-gray-500 hover:text-gray-400 transition"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -45,7 +45,7 @@ export default function RootLayout({
             </a>
             <a
               href="https://www.linkedin.com/in/tcooper1412"
-              className="text-gray-400 hover:text-gray-200 transition"
+              className="text-gray-500 hover:text-gray-400 transition"
               target="_blank"
               rel="noopener noreferrer"
             >
