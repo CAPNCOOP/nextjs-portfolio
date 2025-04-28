@@ -1,7 +1,6 @@
 'use client';
 import SEO from '@/components/SEO';
 import Image from 'next/image';
-import Link from  'next/link';
 import { motion } from 'framer-motion';
 
 export default function AboutPage() {
@@ -40,9 +39,6 @@ export default function AboutPage() {
               <p className="mb-4 text-gray-600">
                 I bring initiative, accountability, and leadership into every project — values forged in both military and professional environments. Whether managing over 200 client accounts or mentoring junior Marines, I&apos;ve learned how to deliver with clarity and care.
               </p>
-              <p className="mb-4 text-gray-600">
-                When I&apos;m not coding, I&apos;m hiking, training, or learning something new. If there&apos;s one thing that drives me, it&apos;s growth — in my skills, my mindset, and the projects I take on.
-              </p>
 
               <section className="mt-8">
                 <h2 className="text-2xl text-gray-800 font-semibold mb-4">Professional Highlights</h2>
@@ -75,7 +71,7 @@ export default function AboutPage() {
                 </div>
               </section>
 
-              <section className="mt-12">
+              <section className="mt-12 mb-12">
                 <h2 className="text-2xl font-semibold mb-6 text-gray-700">Skills & Tools</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -106,16 +102,15 @@ export default function AboutPage() {
                 </div>
               </section>
 
-              <section className="mt-12">
-                <blockquote className="border-l-4 border-gray-400 pl-4 italic text-gray-700">
-                  “I’m always building something — on screen or in myself.”
-                </blockquote>
-              </section>
-
-              <div className="about-links">
-                <Link href="/resume.pdf" className="resume-link">
-                  📄 Download Resume (Coming Soon)
-                </Link>
+              <div className="flex justify-center">
+              <a
+                href="/Resume-Updated24.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-700 p-2 mt-4 rounded-md shadow hover:bg-gray-300 hover:scale-105 hover:text-gray-600 transition-all hover:shadow-lg duration-200 ease-in-out"
+              >
+                Download My Resume
+              </a>
               </div>
             </div>
           </div>
